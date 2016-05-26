@@ -1,0 +1,6 @@
+window.config = {
+    "table": {
+        "rows":2,
+        "cols":2
+    }
+}

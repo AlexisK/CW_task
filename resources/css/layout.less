@@ -1,0 +1,54 @@
+
+@cell_width: 90px;
+@cell_height: 22px;
+@color_heading: #eee;
+@color_border: #ccc;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+
+.hidden { display: none; }
+
+
+table {
+    border-collapse: collapse;
+    font-size: 14px;
+    
+    td, td > * {
+        line-height: 18px;
+        font-size: 14px;
+    }
+    
+    td {
+        position: relative;
+        min-width:@cell_width;
+        border: 1px solid @color_border;
+        text-align: center;
+        
+        > input {
+            position: absolute;
+            top: 0px; right: 0px; bottom: 0px; left: 0px;
+            width: 100%;
+        }
+    }
+    
+    td > * {
+        min-height: @cell_height;
+        text-align: left;
+        padding: 2px 4px;
+    }
+}
+
+
+table td.heading,
+table thead td {
+    background-color:@color_heading;
+}
